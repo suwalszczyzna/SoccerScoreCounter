@@ -14,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
     int TeamARedCard = 0;
     int TeamBYellowCard = 0;
     int TeamBRedCard = 0;
+    String TeamA = "Your Team A";
+    String TeamB = "Your Team B";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         textv4.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
 
         displayScore(TeamAScore, TeamBScore);
+        displayTeams(TeamA,TeamB);
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
 
     public void goalA(View view) {
@@ -50,9 +54,49 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void yellowCardA(View view){
+        TeamAYellowCard += 1;
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+    }
+
+    public void yellowCardB(View view){
+        TeamBYellowCard += 1;
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+    }
+
+    public void redCardA(View view){
+        TeamARedCard += 1;
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+    }
+    public void redCardB(View view){
+        TeamBRedCard += 1;
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+    }
+
 
     public void displayScore(int scoreA, int scoreB) {
         TextView scoreView = (TextView) findViewById(R.id.ScoreSummary);
         scoreView.setText(String.format("%s : %s", String.valueOf(scoreA), String.valueOf(scoreB)));
+    }
+
+    public void displayTeams(String teamA, String teamB) {
+        TextView team_A = (TextView) findViewById(R.id.TeamA);
+        team_A.setText(teamA);
+        TextView team_B = (TextView) findViewById(R.id.TeamB);
+        team_B.setText(teamB);
+    }
+
+    public void displayCards(int yellowCardA, int yellowCardB, int redCardA, int redCardB) {
+        TextView yelCardA = (TextView) findViewById(R.id.teamAYellowCardCounter);
+        yelCardA.setText(String.valueOf(yellowCardA));
+
+        TextView yelCardB = (TextView) findViewById(R.id.teamBYellowCardCounter);
+        yelCardB.setText(String.valueOf(yellowCardB));
+
+        TextView reCardA = (TextView) findViewById(R.id.teamARedCardCounter);
+        reCardA.setText(String.valueOf(redCardA));
+
+        TextView reCardB = (TextView) findViewById(R.id.teamBRedCardCounter);
+        reCardB.setText(String.valueOf(redCardB));
     }
 }
