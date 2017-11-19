@@ -323,6 +323,7 @@
             android:textColor="@color/darker_gray"
             android:textAllCaps="false"
             android:layout_margin="12dp"
+            android:onClick="resetButton"
             android:background="@drawable/reset_button"
             android:fontFamily="@font/roboto_light"/>
     </RelativeLayout>

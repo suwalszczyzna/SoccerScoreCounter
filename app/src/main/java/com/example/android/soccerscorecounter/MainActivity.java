@@ -99,4 +99,15 @@ public class MainActivity extends AppCompatActivity {
         TextView reCardB = (TextView) findViewById(R.id.teamBRedCardCounter);
         reCardB.setText(String.valueOf(redCardB));
     }
+
+    public void resetButton(View view){
+        TeamAScore = 0;
+        TeamBScore = 0;
+        TeamAYellowCard = 0;
+        TeamARedCard = 0;
+        TeamBYellowCard = 0;
+        TeamBRedCard = 0;
+        displayScore(TeamAScore,TeamBScore);
+        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+    }
 }
