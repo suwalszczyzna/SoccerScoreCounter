@@ -7,4 +7,10 @@
     <string name="team_a">Team A</string>
     <string name="team_b">Team B</string>
     <string name="start">start</string>
+    <string name="change_names">change teams names</string>
+    <string name="reset_game">reset game</string>
+    <string name="yellow_card">yellow card</string>
+    <string name="red_card">red card</string>
+    <string name="goal">+ goal</string>
+    <string name="zero_value">0</string>
 </resources>

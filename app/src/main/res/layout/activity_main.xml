@@ -52,7 +52,7 @@
         android:layout_weight="1"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:paddingTop="8dp"
+        android:paddingTop="@dimen/small_padding"
         android:paddingBottom="0dp">
 
 
@@ -73,9 +73,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="3"
-                    android:text="Team A"
+                    android:text="@string/team_a"
                     android:textColor="@color/text_white"
-                    android:textSize="12dp"
+                    android:textSize="12sp"
 
                     tools:ignore="NestedWeights" />
 
@@ -103,8 +103,8 @@
                     android:layout_weight="3"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/text_white"
-                    android:text="Team B"
-                    android:textSize="12dp"
+                    android:text="@string/team_b"
+                    android:textSize="12sp"
                     tools:ignore="NestedWeights" />
 
                 <TextView
@@ -130,16 +130,17 @@
         android:layout_width="match_parent"
         android:background="@drawable/layout_bg"
         android:layout_weight="7"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="@dimen/buttons_group_margin"
+        android:layout_marginRight="@dimen/buttons_group_margin"
+        android:layout_marginBottom="@dimen/buttons_group_margin"
         android:layout_height="0dp">
 
         <LinearLayout
             android:layout_alignParentTop="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -147,7 +148,7 @@
             android:layout_weight="1"
             android:orientation="vertical"
             tools:ignore="NestedWeights"
-            android:padding="8dp">
+            android:padding="@dimen/small_padding">
 
             <Button
                 android:id="@+id/goalTeamA"
@@ -155,7 +156,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/goal_button"
-                android:text="+ goal"
+                android:text="@string/goal"
                 android:textColor="@color/text_white"
                 android:textAllCaps="false"/>
 
@@ -172,14 +173,14 @@
                     android:textColor="@color/dark_red"
                     android:layout_gravity="center"
                     android:textSize="23sp"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp" />
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding" />
 
                 <Button
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/small_padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="red card"
+                    android:text="@string/red_card"
                     android:onClick="redCardA"
                     android:fontFamily="@font/roboto"
                     android:textColor="@color/text_white"
@@ -201,14 +202,14 @@
                     android:textColor="@color/dark_yellow"
                     android:layout_gravity="center"
                     android:textSize="23sp"
-                    android:paddingLeft="8dp"
-                    android:paddingRight="8dp" />
+                    android:paddingLeft="@dimen/small_padding"
+                    android:paddingRight="@dimen/small_padding" />
 
                 <Button
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/small_padding"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="yellow card"
+                    android:text="@string/yellow_card"
                     android:onClick="yellowCardA"
                     android:background="@drawable/yellow_card_button"
                     android:fontFamily="@font/roboto"
@@ -223,7 +224,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_weight="1"
+            android:baselineAligned="false">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -231,7 +233,7 @@
                 android:layout_weight="1"
                 android:orientation="vertical"
                 tools:ignore="NestedWeights"
-                android:padding="8dp">
+                android:padding="@dimen/small_padding">
 
                 <Button
                     android:id="@+id/goalTeamB"
@@ -239,7 +241,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/goal_button"
-                    android:text="+ goal"
+                    android:text="@string/goal"
                     android:textColor="@color/text_white"
                     android:textAllCaps="false"/>
 
@@ -249,11 +251,11 @@
                     android:orientation="horizontal">
 
                     <Button
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/small_padding"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
-                        android:text="red card"
+                        android:text="@string/red_card"
                         android:onClick="redCardB"
                         android:fontFamily="@font/roboto"
                         android:textColor="@color/text_white"
@@ -264,12 +266,12 @@
                         android:id="@+id/teamBRedCardCounter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="@string/zero_value"
                         android:textColor="@color/dark_red"
                         android:layout_gravity="center"
                         android:textSize="23sp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp" />
+                        android:paddingLeft="@dimen/small_padding"
+                        android:paddingRight="@dimen/small_padding" />
 
 
 
@@ -283,12 +285,12 @@
 
 
                     <Button
-                        android:layout_marginTop="8dp"
+                        android:layout_marginTop="@dimen/small_padding"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="4"
                         android:onClick="yellowCardB"
-                        android:text="yellow card"
+                        android:text="@string/yellow_card"
                         android:background="@drawable/yellow_card_button"
                         android:fontFamily="@font/roboto"
                         android:textColor="@color/text_white"
@@ -298,12 +300,12 @@
                         android:id="@+id/teamBYellowCardCounter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="0"
+                        android:text="@string/zero_value"
                         android:textColor="@color/dark_yellow"
                         android:layout_gravity="center"
                         android:textSize="23sp"
-                        android:paddingLeft="8dp"
-                        android:paddingRight="8dp" />
+                        android:paddingLeft="@dimen/small_padding"
+                        android:paddingRight="@dimen/small_padding" />
 
                 </LinearLayout>
 
@@ -315,11 +317,27 @@
         </LinearLayout>
 
         <Button
+            android:id="@+id/change_button"
+            android:layout_above="@id/resetBtn"
+            android:layout_centerHorizontal="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/change_names"
+            android:textColor="@color/darker_gray"
+            android:textAllCaps="false"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginBottom="0dp"
+            android:background="@drawable/reset_button"
+            android:fontFamily="@font/roboto_light"/>
+        
+        <Button
+            android:id="@+id/resetBtn"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="reset game"
+            android:text="@string/reset_game"
             android:textColor="@color/darker_gray"
             android:textAllCaps="false"
             android:layout_margin="12dp"

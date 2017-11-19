@@ -42,6 +42,15 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
         TextView textv4 = (TextView) findViewById(R.id.TeamB_label);
         textv4.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
 
+        button = (Button) findViewById(R.id.change_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog();
+            }
+        });
+
+
         openDialog();
 
         displayScore(TeamAScore, TeamBScore);
