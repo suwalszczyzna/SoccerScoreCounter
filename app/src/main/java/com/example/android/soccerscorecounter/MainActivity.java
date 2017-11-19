@@ -4,9 +4,10 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements Dialog.DialogListener{
 
     int TeamAScore = 0;
     int TeamBScore = 0;
@@ -17,6 +18,9 @@ public class MainActivity extends AppCompatActivity {
     String TeamA = "Your Team A";
     String TeamB = "Your Team B";
 
+    TextView textViewTeamA, textViewTeamB;
+    Button button;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,11 +30,11 @@ public class MainActivity extends AppCompatActivity {
         TextView textv = (TextView) findViewById(R.id.ScoreSummary);
         textv.setShadowLayer(50, 10, 10, Color.rgb(7, 115, 108));
 
-        TextView textv1 = (TextView) findViewById(R.id.TeamA);
-        textv1.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
+        textViewTeamA = (TextView) findViewById(R.id.TeamA);
+        textViewTeamA.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
 
-        TextView textv2 = (TextView) findViewById(R.id.TeamB);
-        textv2.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
+        textViewTeamB = (TextView) findViewById(R.id.TeamB);
+        textViewTeamB.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
 
         TextView textv3 = (TextView) findViewById(R.id.TeamA_label);
         textv3.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
@@ -38,9 +42,26 @@ public class MainActivity extends AppCompatActivity {
         TextView textv4 = (TextView) findViewById(R.id.TeamB_label);
         textv4.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
 
+        openDialog();
+
         displayScore(TeamAScore, TeamBScore);
         displayTeams(TeamA,TeamB);
         displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+
+
+
+    }
+
+
+    public void openDialog(){
+        Dialog dialog = new Dialog();
+        dialog.show(getSupportFragmentManager(),"dialog");
+    }
+
+    @Override
+    public void applyTexts(String teamA, String teamB) {
+        textViewTeamA.setText(teamA);
+        textViewTeamB.setText(teamB);
     }
 
     public void goalA(View view) {
