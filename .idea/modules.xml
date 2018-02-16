@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/SoccerScoreCounter.iml" filepath="$PROJECT_DIR$/SoccerScoreCounter.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/ud834_SoccerScoreCounter.iml" filepath="$PROJECT_DIR$/ud834_SoccerScoreCounter.iml" />
+      <module fileurl="file://C:\Users\dsuwa\AndroidProjects\Nanodegree\SoccerScoreCounter\ud834_SoccerScoreCounter.iml" filepath="C:\Users\dsuwa\AndroidProjects\Nanodegree\SoccerScoreCounter\ud834_SoccerScoreCounter.iml" />
     </modules>
   </component>
 </project>
