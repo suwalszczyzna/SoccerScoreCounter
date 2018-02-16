@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements Dialog.DialogListener{
+public class MainActivity extends AppCompatActivity implements Dialog.DialogListener {
 
     int TeamAScore = 0;
     int TeamBScore = 0;
@@ -54,17 +54,16 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
         openDialog();
 
         displayScore(TeamAScore, TeamBScore);
-        displayTeams(TeamA,TeamB);
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
-
+        displayTeams(TeamA, TeamB);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
 
 
     }
 
 
-    public void openDialog(){
+    public void openDialog() {
         Dialog dialog = new Dialog();
-        dialog.show(getSupportFragmentManager(),"dialog");
+        dialog.show(getSupportFragmentManager(), "dialog");
     }
 
     @Override
@@ -84,23 +83,24 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
 
     }
 
-    public void yellowCardA(View view){
+    public void yellowCardA(View view) {
         TeamAYellowCard += 1;
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
 
-    public void yellowCardB(View view){
+    public void yellowCardB(View view) {
         TeamBYellowCard += 1;
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
 
-    public void redCardA(View view){
+    public void redCardA(View view) {
         TeamARedCard += 1;
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
-    public void redCardB(View view){
+
+    public void redCardB(View view) {
         TeamBRedCard += 1;
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
 
 
@@ -130,14 +130,14 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
         reCardB.setText(String.valueOf(redCardB));
     }
 
-    public void resetButton(View view){
+    public void resetButton(View view) {
         TeamAScore = 0;
         TeamBScore = 0;
         TeamAYellowCard = 0;
         TeamARedCard = 0;
         TeamBYellowCard = 0;
         TeamBRedCard = 0;
-        displayScore(TeamAScore,TeamBScore);
-        displayCards(TeamAYellowCard,TeamBYellowCard, TeamARedCard, TeamBRedCard);
+        displayScore(TeamAScore, TeamBScore);
+        displayCards(TeamAYellowCard, TeamBYellowCard, TeamARedCard, TeamBRedCard);
     }
 }

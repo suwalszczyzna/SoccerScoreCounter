@@ -8,13 +8,10 @@
     <color name="text_white">#FFFFFF</color>
     <color name="dark_green">#007e43</color>
     <color name="brighter_green">#07a45b</color>
-
     <color name="dark_red">#bf0000</color>
     <color name="brighter_red">#e53939</color>
-
     <color name="dark_yellow">#e5a300</color>
     <color name="brighter_yellow">#f9b81a</color>
-
     <color name="brighter_gray">#ededed</color>
     <color name="gray">#e3e3e3</color>
     <color name="darker_gray">#8e8e8e</color>
