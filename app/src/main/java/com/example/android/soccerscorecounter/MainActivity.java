@@ -27,22 +27,22 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
         setContentView(R.layout.activity_main);
 
 
-        TextView textv = (TextView) findViewById(R.id.ScoreSummary);
+        TextView textv = findViewById(R.id.ScoreSummary);
         textv.setShadowLayer(50, 10, 10, Color.rgb(7, 115, 108));
 
-        textViewTeamA = (TextView) findViewById(R.id.TeamA);
+        textViewTeamA = findViewById(R.id.TeamA);
         textViewTeamA.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
 
-        textViewTeamB = (TextView) findViewById(R.id.TeamB);
+        textViewTeamB = findViewById(R.id.TeamB);
         textViewTeamB.setShadowLayer(10, 3, 2, Color.rgb(7, 93, 87));
 
-        TextView textv3 = (TextView) findViewById(R.id.TeamA_label);
+        TextView textv3 = findViewById(R.id.TeamA_label);
         textv3.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
 
-        TextView textv4 = (TextView) findViewById(R.id.TeamB_label);
+        TextView textv4 = findViewById(R.id.TeamB_label);
         textv4.setShadowLayer(15, 3, 2, Color.rgb(7, 93, 87));
 
-        button = (Button) findViewById(R.id.change_button);
+        button = findViewById(R.id.change_button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,28 +105,28 @@ public class MainActivity extends AppCompatActivity implements Dialog.DialogList
 
 
     public void displayScore(int scoreA, int scoreB) {
-        TextView scoreView = (TextView) findViewById(R.id.ScoreSummary);
+        TextView scoreView = findViewById(R.id.ScoreSummary);
         scoreView.setText(String.format("%s : %s", String.valueOf(scoreA), String.valueOf(scoreB)));
     }
 
     public void displayTeams(String teamA, String teamB) {
-        TextView team_A = (TextView) findViewById(R.id.TeamA);
+        TextView team_A = findViewById(R.id.TeamA);
         team_A.setText(teamA);
-        TextView team_B = (TextView) findViewById(R.id.TeamB);
+        TextView team_B = findViewById(R.id.TeamB);
         team_B.setText(teamB);
     }
 
     public void displayCards(int yellowCardA, int yellowCardB, int redCardA, int redCardB) {
-        TextView yelCardA = (TextView) findViewById(R.id.teamAYellowCardCounter);
+        TextView yelCardA = findViewById(R.id.teamAYellowCardCounter);
         yelCardA.setText(String.valueOf(yellowCardA));
 
-        TextView yelCardB = (TextView) findViewById(R.id.teamBYellowCardCounter);
+        TextView yelCardB = findViewById(R.id.teamBYellowCardCounter);
         yelCardB.setText(String.valueOf(yellowCardB));
 
-        TextView reCardA = (TextView) findViewById(R.id.teamARedCardCounter);
+        TextView reCardA = findViewById(R.id.teamARedCardCounter);
         reCardA.setText(String.valueOf(redCardA));
 
-        TextView reCardB = (TextView) findViewById(R.id.teamBRedCardCounter);
+        TextView reCardB = findViewById(R.id.teamBRedCardCounter);
         reCardB.setText(String.valueOf(redCardB));
     }
 
